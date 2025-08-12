@@ -261,7 +261,7 @@ public:
             }
             if (!major_flag) {
                 int left_range = largest_bucket_id - 2 * log2_ceil(ele_size);
-                for (auto i : bucket_map) {
+                for (auto& i : bucket_map) {
                     if (i.first < left_range) {
                         if (random_bucket_weight <= i.second.bucket_weight) {
                             cur_bucket = &i.second;
